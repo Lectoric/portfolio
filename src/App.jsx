@@ -5,11 +5,13 @@ import { Route, Routes } from 'react-router-dom';
 import Navbar from './components/navbar';
 import Projects from './pages/projects';
 import About from './pages/about';
+import ScrollToTop from './components/scroll_up';
 
 function App() {
   return (
     <div>
       <Navbar />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Projects />} />
         <Route path="/about" element={<About />} />
