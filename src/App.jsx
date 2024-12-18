@@ -1,17 +1,26 @@
-// filepath: /c:/Users/panay/Desktop/BUAS/YEAR 2/REPOSITORIES/portfolio/src/App.jsx
-import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Route, Routes, useLocation } from 'react-router-dom';
 
 import Navbar from './components/navbar';
 import Projects from './pages/projects';
 import About from './pages/about';
-import ScrollToTop from './components/scroll_up';
 
 function App() {
+
+  // For smooth scrolling to the top of the page
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }, [pathname]);
+
+  // Route logic
   return (
     <div>
       <Navbar />
-      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Projects />} />
         <Route path="/about" element={<About />} />

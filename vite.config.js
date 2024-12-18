@@ -1,4 +1,3 @@
-// filepath: /c:/Users/panay/Desktop/BUAS/YEAR 2/REPOSITORIES/portfolio/vite.config.js
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
