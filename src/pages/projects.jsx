@@ -10,7 +10,7 @@ function App() {
         <header className="app-header">
             <div className="main_front_text"><span>('Portfolio')</span></div>
                 {/* Scroll down indicator, will revisit later mayhaps */}
-                {/* <img src="/public/images/scroll_down.gif" alt="Description" className="scroll_down_container" /> */}
+                {/* <img src="/portfolio/images/scroll_down.gif" alt="Description" className="scroll_down_container" /> */}
         </header>
 
         <section className="gallery-container">
