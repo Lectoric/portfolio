@@ -7,7 +7,7 @@ import About from './pages/about';
 
 function App() {
   return (
-    <Router basename="/portfolio">
+    <Router>
       <div>
         <Navbar />
 
