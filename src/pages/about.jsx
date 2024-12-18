@@ -14,7 +14,7 @@ function About() {
 
         <section className="about-background-header">
           <h2>SKILLS</h2>
-            {/* <InfiniteScroller /> */}
+            <InfiniteScroller />
         </section>
 
         <hr className="divider" />
