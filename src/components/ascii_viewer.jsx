@@ -130,13 +130,6 @@ const AsciiViewer = () => {
           
           const earlierScroll = Math.min(5, (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 10);
 
-          // Might be re-used, zooms out the model
-          // camera.position.y = earlierScroll * bbox.max.y * 20;
-
-          // camera.lookAt(myMesh.position); 
-
-          
-
           const startColor = [185, 255, 71]; 
           const endColor = [0,0,0];      
 
@@ -154,8 +147,19 @@ const AsciiViewer = () => {
         };
 
         window.addEventListener('scroll', onScroll);
-      }
-    );
+
+        // Reset scroll-dependent properties on refresh
+        window.addEventListener('beforeunload', () => {
+          window.scrollTo(0, 0);
+          const logo = document.querySelector('.main_front_text');
+          if (logo) {
+            logo.style.opacity = 1;
+          }
+          ASCIIColor = 'rgba(184, 255, 71, 1)';
+          effect.domElement.style.color = ASCIIColor;
+        });
+            }
+          );
 
     // Adjust the viewer when the window is resized
     window.addEventListener('resize', onWindowResize);
