@@ -1,7 +1,6 @@
 import React from 'react';
 import './about.css';
 import InfiniteScroller from '../components/infinite_scroll';
-import AsciiViewer from '../components/ascii_viewer';
 
 function About() {
     return (
@@ -15,7 +14,7 @@ function About() {
 
         <section className="about-background-header">
           <h2>SKILLS</h2>
-            <InfiniteScroller />
+            {/* <InfiniteScroller /> */}
         </section>
 
         <hr className="divider" />
@@ -58,8 +57,6 @@ function About() {
         </section>
 
         <hr className="divider" />
-
-            {/* <AsciiViewer /> */}
         <h1 className="bottom-website-text"><span>Panagiotis Evangelou</span></h1>
         </div>
     );
