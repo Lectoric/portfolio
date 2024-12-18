@@ -7,13 +7,13 @@ import About from './pages/about';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/portfolio">
       <div>
         <Navbar />
 
         <Routes>
-              <Route path="/" element={<Projects />} />
-              <Route path="/about" element={<About />} />
+          <Route path="/" element={<Projects />} />
+          <Route path="/about" element={<About />} />
         </Routes>
 
       </div>
