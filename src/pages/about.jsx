@@ -7,7 +7,7 @@ function About() {
     return (
       <div>
         <section className="header">
-                <img src="/public/images/hello_my_name_is.png" className="hello-my-name-is-sticker" />
+                <img src="/portfolio/images/hello_my_name_is.png" className="hello-my-name-is-sticker" />
                  <div className="main-about-text main-text"><span>Panagiotis Evangelou</span></div>
             </section>
 
