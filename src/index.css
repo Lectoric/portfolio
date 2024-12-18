@@ -1,0 +1,95 @@
+/* Main header fonts */
+@font-face {
+  font-family: 'MainTitleFont';
+  src: url('../fonts/FKRasterRomanCompactTrial-Blended.otf') format('opentype');
+}
+
+/* Custom defined fonts */
+@font-face {
+  font-family: 'Archivo Bold';
+  src: url('../fonts/Archivo/Archivo-Bold.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Archivo';
+  src: url('../fonts/Archivo/Archivo-Regular.ttf') format('opentype');
+}
+
+
+@font-face {
+  font-family: 'Archivo Italic';
+  src: url('../fonts/Archivo/Archivo-Italic.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Archivo Light';
+  src: url('../fonts/Archivo/Archivo-Light.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Archivo Light Italic';
+  src: url('../fonts/Archivo/Archivo-LightItalic.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Archivo Thin';
+  src: url('../fonts/Archivo/Archivo-Thin.ttf') format('opentype');
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  background-color: #000000;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* body {
+  margin: 0;
+} */
+
+.main-text {
+    font: 8vw 'MainTitleFont';
+    color: white;
+    mix-blend-mode: difference;
+}
+
+h1 {
+  font-size: 3.2em;
+  font: 25px 'Archivo';
+  color: white;
+}
+
+h2 {
+  text-align: center;
+  font: 25px 'Archivo Light';
+  color: white;
+}
+
+.h2-italics {
+  text-align: center;
+  font: 25px 'Archivo Light Italic';
+  color: white;
+}
+
+h3 {
+  text-align: center;
+  font: 18px 'Archivo Thin';
+  color: white;
+}
+
+.bottom-website-text {
+  font: 25px 'MainTitleFont';
+  text-align: center;
+  color: rgba(255, 255, 255, 0.145);
+  padding: 1%;
+}
+
+.divider {
+  opacity: 0.2;
+}
+
