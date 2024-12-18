@@ -1,4 +1,3 @@
-// filepath: /c:/Users/panay/Desktop/BUAS/YEAR 2/REPOSITORIES/portfolio/src/components/ascii_viewer.jsx
 import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import { STLLoader } from 'three/examples/jsm/loaders/STLLoader.js';
@@ -136,6 +135,8 @@ const AsciiViewer = () => {
 
           // camera.lookAt(myMesh.position); 
 
+          
+
           const startColor = [185, 255, 71]; 
           const endColor = [0,0,0];      
 
@@ -149,34 +150,10 @@ const AsciiViewer = () => {
           effect.domElement.style.color = ASCIIColor;
 
           const logo = document.querySelector('.main_front_text');
-          if (logo) {
-            logo.style.opacity = 1 - earlierScroll;
-          }
+          logo.style.opacity = 1 - earlierScroll;
         };
 
-        // Call onScroll immediately to set the initial state
-        onScroll();
-
-        // Add the scroll event listener
         window.addEventListener('scroll', onScroll);
-
-        // Add the beforeunload event listener to handle page refresh
-        window.addEventListener('beforeunload', () => {
-          const maxScroll = document.body.scrollHeight - window.innerHeight;
-          const scrollFactor = scrollY / maxScroll;
-          const earlierScroll = Math.min(5, (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 10);
-
-          if (earlierScroll > 0) {
-            ASCIIColor = 'rgba(0, 0, 0, 1)';
-            effect.domElement.style.color = ASCIIColor;
-          }
-        });
-
-        // Cleanup the event listeners on component unmount
-        return () => {
-          window.removeEventListener('scroll', onScroll);
-          window.removeEventListener('beforeunload', onScroll);
-        };
       }
     );
 
@@ -196,13 +173,11 @@ const AsciiViewer = () => {
 
     return () => {
       window.removeEventListener('resize', onWindowResize);
-      window.removeEventListener('scroll', onScroll);
-      window.removeEventListener('beforeunload', onScroll);
       container.removeChild(effect.domElement);
     };
   }, []);
 
-  return <div ref={containerRef} style={{ width: '100%' }} />;
+  return <div ref={containerRef} style={{ width: '100%'}} />;
 };
 
 export default AsciiViewer;
