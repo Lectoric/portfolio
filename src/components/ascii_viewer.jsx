@@ -135,8 +135,6 @@ const AsciiViewer = () => {
 
           // camera.lookAt(myMesh.position); 
 
-          
-
           const startColor = [185, 255, 71]; 
           const endColor = [0,0,0];      
 
@@ -150,15 +148,23 @@ const AsciiViewer = () => {
           effect.domElement.style.color = ASCIIColor;
 
           const logo = document.querySelector('.main_front_text');
-          logo.style.opacity = 1 - earlierScroll;
+          if (logo) {
+            logo.style.opacity = 1 - earlierScroll;
+          }
         };
 
+        // Call onScroll immediately to set the initial state
+        onScroll();
+
+        // Add the scroll event listener
         window.addEventListener('scroll', onScroll);
+
+        // Cleanup the event listener on component unmount
+        return () => {
+          window.removeEventListener('scroll', onScroll);
+        };
       }
     );
-
-    onScroll();
-    window.addEventListener('scroll', onScroll);
 
     // Adjust the viewer when the window is resized
     window.addEventListener('resize', onWindowResize);
