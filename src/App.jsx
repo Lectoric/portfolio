@@ -1,4 +1,3 @@
-// filepath: /c:/Users/panay/Desktop/BUAS/YEAR 2/REPOSITORIES/portfolio/src/App.jsx
 import React from 'react';
 import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 
@@ -8,7 +7,7 @@ import About from './pages/about';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/portfolio">
       <div>
         <Navbar />
 
