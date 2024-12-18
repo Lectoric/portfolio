@@ -157,6 +157,9 @@ const AsciiViewer = () => {
       }
     );
 
+    onScroll();
+    window.addEventListener('scroll', onScroll);
+
     // Adjust the viewer when the window is resized
     window.addEventListener('resize', onWindowResize);
 
